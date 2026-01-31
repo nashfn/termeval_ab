@@ -2,7 +2,7 @@
 name = "green-agent"
 version = "0.1.0"
 description = "TerminalBench Evaluator Agent for AgentBeats"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "a2a",
     "uvicorn",
@@ -10,6 +10,7 @@ dependencies = [
     "harbor",
     "pydantic>=2.0",
     "httpx",
+    "a2a-sdk[http-server]>=0.3.22",
 ]
 
 [build-system]

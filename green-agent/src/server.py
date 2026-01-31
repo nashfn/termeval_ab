@@ -26,6 +26,8 @@ def create_agent_card(host: str, port: int) -> AgentCard:
             streaming=False,
             pushNotifications=False,
         ),
+        defaultInputModes=["text"],
+        defaultOutputModes=["text"],
         skills=[
             AgentSkill(
                 id="evaluate",

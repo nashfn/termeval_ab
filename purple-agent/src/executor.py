@@ -27,11 +27,15 @@ class PurpleAgentExecutor(AgentExecutor):
         model: str,
         max_tokens: int = 4096,
         temperature: float = 0.0,
+        api_key: str | None = None,
+        api_base: str | None = None,
     ):
         self.agent = TerminalAgent(
             model=model,
             max_tokens=max_tokens,
             temperature=temperature,
+            api_key=api_key,
+            api_base=api_base,
         )
 
     async def execute(

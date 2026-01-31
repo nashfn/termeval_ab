@@ -1,3 +1,36 @@
+⏺ Done. I've updated the following files to support custom LLM endpoints like Nebius:
+
+  sample.env - Comprehensive environment variable configuration:
+  - API keys for all major providers (Anthropic, OpenAI, Google, Azure, AWS, Together AI, Groq)
+  - Custom endpoint URLs (NEBIUS_API_BASE, OPENAI_API_BASE, AZURE_API_BASE, OLLAMA_API_BASE)
+  - LiteLLM configuration options
+  - Detailed documentation for each provider
+
+  purple-agent/src/llm_client.py - Enhanced LLM client:
+  - Provider-to-environment-variable mapping
+  - Automatic endpoint resolution based on provider prefix
+  - Special handling for Nebius (converts to OpenAI-compatible format)
+  - Constructor accepts api_key and api_base overrides
+
+  purple-agent/src/server.py - Added CLI options:
+  - --api-base - Custom API base URL
+  - --api-key - API key override
+  - Usage examples in help text
+
+  purple-agent/src/executor.py and agent.py - Pass through API config
+
+  Usage examples:
+
+  # Nebius Cloud
+  python purple-agent/src/server.py \
+    --model nebius/meta-llama/Meta-Llama-3.1-70B-Instruct \
+    --api-base https://api.studio.nebius.ai/v1
+
+  # Or via environment variables
+  export NEBIUS_API_KEY=your-key
+  export NEBIUS_API_BASE=https://api.studio.nebius.ai/v1
+  python purple-agent/src/server.py --model nebius/meta-llama/Meta-Llama-3.1-70B-Instruct
+------------------------------------------------------------------------------------------------------------------------
  Done. Here's a summary of the changes:
 
   1. nodejs_backend/src/agents/base.ts
