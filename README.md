@@ -10,7 +10,7 @@ AgentBeats green and purple agents for TerminalBench evaluation.
 ## Project Structure
 
 ```
-swe_pro_sb/
+termeval_ab/
 ├── README.md
 ├── pyproject.toml
 ├── scenario.toml
@@ -60,7 +60,7 @@ swe_pro_sb/
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd swe_pro_sb
+   cd termeval_ab
    ```
 
 2. Install dependencies:

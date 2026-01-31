@@ -1,0 +1,11 @@
+[project]
+name = "agentbeats-terminalbench"
+version = "0.1.0"
+description = "AgentBeats green and purple agents for TerminalBench evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

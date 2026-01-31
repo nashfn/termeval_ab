@@ -1,0 +1,15 @@
+[green_agent]
+endpoint = "http://127.0.0.1:9009"
+command = "python green-agent/src/server.py --host 127.0.0.1 --port 9009"
+
+[[participants]]
+name = "terminal_agent"
+endpoint = "http://127.0.0.1:9010"
+command = "python purple-agent/src/server.py --host 127.0.0.1 --port 9010"
+
+[config]
+dataset = "terminal-bench-core"
+version = "2.0"
+max_turns = 50
+task_timeout = 600
+model = "anthropic/claude-sonnet-4-20250514"
